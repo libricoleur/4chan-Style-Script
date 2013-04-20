@@ -370,6 +370,7 @@ input[type=submit],
 ($SS.conf["Hide Checkboxes"] ? ".postInfo>input[type=checkbox],.postInfo>.riceCheck,.deleteform," : "") +
 ($SS.conf["Show/Hide Menu Entry"] ? ".hide_thread_button:not(.hidden_thread),.hide_reply_button:not(.stub)," : ".stub>.menu_button,") +
 ($SS.conf["Custom Navigation Links"] ? "#boardNavDesktop>a," : "") +
+($SS.conf["Show ads"] ? "" : "div.center,") +
 ($SS.location.catalog ? ".boardBanner," : "") + "
 .mobile,
 [hidden],
@@ -390,7 +391,6 @@ a[href='.././catalog'],
 #delform>hr,
 body>.closed>br,
 .board>hr:nth-last-child(2),
-div.center,
 .mFileInfo,
 #imageExpand,
 #settingsWindowLink,
@@ -2968,5 +2968,14 @@ body>form[action='']>table td[width='240px'] {
 }
 #content #threads .thread {
 	background:" + $SS.theme.bgColor.hex + "!important;
+} " + ($SS.conf["Show ads"] ? "
+div.center {
+        text-align:right;
+        opacity: .5;
 }
+div.center img {
+        width: 468px;
+        height: 60px;
+}
+" : "") + "
 " + $SS.theme.customCSS + "
