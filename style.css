@@ -1320,7 +1320,7 @@ textarea,
 	height:auto!important;
 	margin:0!important;
 	position:relative;
-	opacity:.5;
+	opacity:" + ($SS.conf["Fade Logo"] ? ".5" : "1") + ";
 	z-index:1;
 }
 " + ($SS.conf["Show Logo"] && $SS.conf["Show Logo Reflection"] ? "
