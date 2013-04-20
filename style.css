@@ -2970,12 +2970,12 @@ body>form[action='']>table td[width='240px'] {
 	background:" + $SS.theme.bgColor.hex + "!important;
 } " + ($SS.conf["Show ads"] ? "
 div.center {
-        text-align:right;
-        opacity: .5;
+        width: 468px;
 }
-div.center img {
+div.center a img {
         width: 468px;
         height: 60px;
+        opacity: .5;
 }
 " : "") + "
 " + $SS.theme.customCSS + "
